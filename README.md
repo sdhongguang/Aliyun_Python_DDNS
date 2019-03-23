@@ -36,3 +36,8 @@
     # 意思是 每10分钟执行一次。但我并不知道这么做是不是有用。太新手了。。。
 
 8、郁闷不，不小心把 accessKey传上去了，真坑。
+    请自己新建一个文件，account.py
+    
+    ak = 'your_AccessKeyId'
+    sc = 'your_AccessKeySecret'
+    SubDomain = 'your_SubDomain'

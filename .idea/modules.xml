@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Aliyun_Python_DDNS/.idea/Aliyun_Python_DDNS.iml" filepath="$PROJECT_DIR$/../Aliyun_Python_DDNS/.idea/Aliyun_Python_DDNS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Aliyun_Python_DDNS.iml" filepath="$PROJECT_DIR$/.idea/Aliyun_Python_DDNS.iml" />
     </modules>
   </component>
 </project>

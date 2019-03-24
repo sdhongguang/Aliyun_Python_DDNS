@@ -11,7 +11,7 @@ import account
 def get_ip(): #获取ip
     get_ip = os.popen('(curl -s http://txt.go.sohu.com/ip/soip) | grep -P -o -i "(\d+.\d+.\d+.\d+)"')
     ip = get_ip.read()
-    print("get_ip is running, got_ip is", ip)
+    print ("get_ip is running, got_ip is %s" %ip)
     return ip
 
 
@@ -32,7 +32,7 @@ def get_record(): #获取阿里云的DNS信息
     response = client.do_action(request)
     # python2: print(response)
     record = json.loads(response)
-    print("get_record is running, record_ip is ", record['DomainRecords']['Record'][0]['Value'])
+    print("get_record is running, record_ip is %s" % record['DomainRecords']['Record'][0]['Value'])
     # 提取并返回阿里云的DNS信息，列表格式
     return record['DomainRecords']['Record']
 
@@ -71,8 +71,8 @@ if ip_confirm:
     if got_ip != got_record[0]['Value']:
         change_record(got_ip)
         filecontrol.ip_file_update(got_ip)
-        print("OriginalIP is ", got_record[0]['Value'])
-        print("ChangedIP is ", got_ip)
+        print("OriginalIP is %s" % got_record[0]['Value'])
+        print("ChangedIP is %s" % got_ip)
 
 
 

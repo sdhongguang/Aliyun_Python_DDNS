@@ -11,7 +11,7 @@ import account
 def get_ip(): #获取ip
     get_ip = os.popen('(curl -s http://txt.go.sohu.com/ip/soip) | grep -P -o -i "(\d+.\d+.\d+.\d+)"')
     ip = get_ip.read()
-    print ("get_ip is running, got_ip is %s" %ip)
+    print ("get_ip is running, got_ip is %s" % ip)
     return ip
 
 

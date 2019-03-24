@@ -108,3 +108,4 @@ venv.bak/
 
 # 账号信息
 /account.py
+将删除 .idea/workspace.xml

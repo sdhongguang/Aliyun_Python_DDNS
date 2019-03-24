@@ -35,8 +35,8 @@
     */10 *  * * *   root    /usr/bin/python3.6 /home/yourname/getrecord.py
     # 意思是 每10分钟执行一次。但我并不知道这么做是不是有用。太新手了。。。
 
-8、郁闷不，不小心把 accessKey传上去了，真坑。
-    请自己新建一个文件，account.py
+8、郁闷，不小心把 accessKey传上去了，真坑。
+    修改account.py文件，将自己获得的 accessKey 和 二级域名 信息替换上去。
     
     ak = 'your_AccessKeyId'
     sc = 'your_AccessKeySecret'

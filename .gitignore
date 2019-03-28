@@ -108,4 +108,7 @@ venv.bak/
 
 # 账号信息
 /account.py
+
+# ip地址信息
+/ipAddress
 将删除 .idea/workspace.xml

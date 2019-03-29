@@ -1,10 +1,10 @@
 #! /usr/bin/env python
 # coding=utf-8
+import os
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
-import os
 import json
-import filecontrol
+from filecontrol import *
 import account
 
 
@@ -63,14 +63,14 @@ def change_record(ip): # 解析DNS的ip地址，传入本地公网IP地址
 
 got_ip = get_ip()
 # print(filecontrol.ip_file_verify(got_ip))
-ip_not_confirm = filecontrol.ip_file_verify(got_ip)
+ip_not_confirm = ip_file_verify(got_ip)
 # print(ip_not_confirm)
 if ip_not_confirm:    #如果获取到的IP地址和 文件中记载的IP地址不符。
     got_record = get_record()    # 获取DNS解析信息
     # print(type(got_record[0]['Value']))
     if got_ip != got_record[0]['Value']:    # 将获取的本地公网IP 与DNS解析对比，如果不符。
         change_record(got_ip)    # 更新DNS解析
-        filecontrol.ip_file_update(got_ip)    # 将获取的本地公网IP 写入文件，留作下次对比
+        ip_file_update(got_ip)    # 将获取的本地公网IP 写入文件，留作下次对比
         print("OriginalIP is %s" % got_record[0]['Value'])
         print("ChangedIP is %s" % got_ip)
 

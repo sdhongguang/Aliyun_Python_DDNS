@@ -27,7 +27,7 @@ sudo pip3 install Aliyun-Python-SDK-Core
     我现在是更改的 /etc/crontab 文件，增加了一行：    
 
 ```shell
-*/10 *  * * *   root    /usr/bin/python3.6 /home/yourname/getrecord.py
+*/10 *  * * *   root    /usr/bin/python3.6 /home/yourname/Aliyun_Python_DDNS/ddns.py
 ```
 
 7、郁闷，不小心把 accessKey传上去了，重新建立 account.py 作为模块参数传递给 主程序。

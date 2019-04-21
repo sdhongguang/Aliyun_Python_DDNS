@@ -31,7 +31,7 @@ def get_record(): #获取阿里云的DNS信息
     request.add_query_param('SubDomain', account.SubDomain)
     response = client.do_action(request)
     # python2: print(response)
-    record = json.loads(response)
+    record = json.loads(response.decode())
     print("get_record is running, record_ip is %s" % record['DomainRecords']['Record'][0]['Value'])
     # 提取并返回阿里云的DNS信息，列表格式
     return record['DomainRecords']['Record']
